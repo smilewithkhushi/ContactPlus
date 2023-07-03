@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true"
+    android:background="@drawable/modernblue2"
+    tools:context=".signup">
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/aleo_bold"
+        android:shadowColor="#606060"
+        android:text="Please sign up to create an account"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        tools:viewBindingIgnore="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signupName"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:fontFamily="@font/be_vietnam_medium"
+            android:hint="Name"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        tools:viewBindingIgnore="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signupEmail"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/baseline_email_24"
+            android:fontFamily="@font/be_vietnam_medium"
+            android:hint="Email"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        android:layout_margin="10dp"
+        tools:layout_editor_absoluteY="362dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signupPassword"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:fontFamily="@font/be_vietnam_medium"
+            android:hint="Password"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Password"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:paddingHorizontal="50dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/darkindigotheme"
+        android:fontFamily="@font/be_vietnam_medium"
+        android:shadowColor="#3F51B5"
+        android:text="SIGN UP"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/aleo_bold"
+            android:shadowColor="#606060"
+            android:text="Already have an account?"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:background="@color/lightpurple"
+            android:backgroundTint="@color/darkindigotheme"
+            android:fontFamily="@font/be_vietnam_medium"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#3F51B5"
+            android:text="SIGN IN"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

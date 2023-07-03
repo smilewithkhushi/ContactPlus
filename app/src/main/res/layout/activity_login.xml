@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true"
+    android:background="@drawable/modernblue2"
+    tools:context=".login">
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aleo_bold"
+        android:shadowColor="#606060"
+        android:text="Please sign in to continue"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="220dp"
+        android:layout_gravity="center"
+/>
+
+    <EditText
+        android:id="@+id/loginEmail"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:drawableLeft="@drawable/baseline_email_24"
+        android:fontFamily="@font/be_vietnam_medium"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#000000"
+        android:padding="10dp"
+        android:textSize="16sp"/>
+
+
+    <EditText
+        android:id="@+id/loginPassword"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:hint="Password"
+        android:padding="10dp"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/baseline_lock_24"
+        android:fontFamily="@font/be_vietnam_medium"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:autofillHints="" />
+
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Password"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp" />
+
+
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:paddingHorizontal="50dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/darkindigotheme"
+        android:fontFamily="@font/be_vietnam_medium"
+        android:shadowColor="#3F51B5"
+        android:text="LOG IN"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/aleo_bold"
+            android:shadowColor="#606060"
+            android:text="Do not have an account?"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:background="@color/lightpurple"
+            android:backgroundTint="@color/darkindigotheme"
+            android:fontFamily="@font/be_vietnam_medium"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#3F51B5"
+            android:text="SIGN UP"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

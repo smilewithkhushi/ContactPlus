@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/aleo_bold</item>
+        <item>@font/aleo_light</item>
+        <item>@font/be_vietnam_medium</item>
+        <item>@font/stint_ultra_expanded</item>
+    </array>
+</resources>
