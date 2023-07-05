@@ -7,7 +7,6 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
-import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthInvalidUserException
@@ -15,21 +14,23 @@ import com.google.firebase.auth.FirebaseAuthInvalidUserException
 class login : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
         lateinit var firebaseAuth: FirebaseAuth
-
+        lateinit var inputEmail : EditText
+        lateinit var inputPass : EditText
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val inputEmail = findViewById<EditText>(R.id.loginEmail)
-        val inputPass = findViewById<EditText>(R.id.loginPassword)
+        inputEmail = findViewById(R.id.loginEmail)
+        inputPass = findViewById(R.id.loginPassword)
         val loginBtn = findViewById<Button>(R.id.loginButton)
         val signupBtn = findViewById<Button>(R.id.signUpButton)
 
-        val email = inputEmail.text.toString().trim()
-        val password = inputPass.text.toString().trim()
+        val email = inputEmail.text.toString()
+        val password = inputPass.text.toString()
+
+        val mailText = inputEmail?.text
+        val pwdText = inputPass?.text
 
         //show password button
         val checkBoxShowPassword = findViewById<CheckBox>(R.id.checkBox)
@@ -50,15 +51,19 @@ class login : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         loginBtn.setOnClickListener {
-
-            if (email.isNotEmpty() && password.isNotEmpty()) {
+            if (mailText.isNullOrBlank()) {
+            Toast.makeText(this, "Please enter email", Toast.LENGTH_SHORT).show()
+        }else if (pwdText.isNullOrBlank()) {
+            Toast.makeText(this, "Please enter password", Toast.LENGTH_SHORT).show()
+        }
+            else {
                 firebaseAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             // Login successful, start the dashboard activity
                             val intent = Intent(this, dashboard::class.java)
                             startActivity(intent)
-                            finish()
+
                         } else {
                             // Login failed, display an error message
                             val exception = task.exception
@@ -75,9 +80,8 @@ class login : AppCompatActivity() {
                             }
                         }
                     }
-            } else {
-                Toast.makeText(this, "Please enter email and password", Toast.LENGTH_SHORT).show()
             }
+
         }
 
         signupBtn.setOnClickListener {

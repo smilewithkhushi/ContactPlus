@@ -38,8 +38,9 @@
             android:drawableLeft="@drawable/baseline_person_24"
             android:fontFamily="@font/be_vietnam_medium"
             android:hint="Name"
+            android:inputType="text"
             android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -49,7 +50,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         tools:viewBindingIgnore="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -60,8 +61,9 @@
             android:drawableLeft="@drawable/baseline_email_24"
             android:fontFamily="@font/be_vietnam_medium"
             android:hint="Email"
+            android:inputType="textEmailAddress"
             android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -70,7 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="1dp"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         tools:layout_editor_absoluteY="362dp">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -81,8 +83,9 @@
             android:drawableLeft="@drawable/baseline_lock_24"
             android:fontFamily="@font/be_vietnam_medium"
             android:hint="Password"
+            android:inputType="textPassword"
             android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
@@ -91,10 +94,10 @@
         android:layout_height="wrap_content"
         android:text="Show Password"
         android:layout_gravity="center"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="2dp" />
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/signUpButton"
         android:layout_width="wrap_content"
         android:paddingHorizontal="50dp"
         android:layout_height="wrap_content"
@@ -103,7 +106,7 @@
         android:shadowColor="#3F51B5"
         android:text="SIGN UP"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         android:textColor="@color/white"
         android:textSize="18sp" />
 
