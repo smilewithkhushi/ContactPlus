@@ -1,0 +1,168 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/modernblue4"
+    tools:context=".addContacts">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:background="#9AFFFFFF"
+        android:paddingVertical="10dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:fontFamily="@font/be_vietnam_medium"
+            android:text="Cancel" />
+
+
+        <TextView
+            android:id="@+id/NewContact"
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="20sp"
+            android:fontFamily="@font/be_vietnam_medium"
+            android:gravity="center"
+            android:text="New    Contact"
+            android:textColor="@color/darkindigotheme"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/saveContactBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:fontFamily="@font/be_vietnam_medium"
+            android:foregroundGravity="right"
+            android:textSize="12sp"
+            android:text="Save" />
+
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/uploadContactImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#00000000"
+        android:layout_margin="20dp"
+        app:srcCompat="@drawable/outline_add_circle_24" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/nameEditText"
+            android:background="#9AFFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/be_vietnam_medium"
+            android:inputType="text"
+            android:drawableStart="@drawable/outline_black_circle_24"
+            android:drawablePadding="10sp"
+            android:hint="Add Name"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/numberEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#9AFFFFFF"
+
+            android:drawableStart="@drawable/outline_black_circle_24"
+            android:drawablePadding="10sp"
+            android:textSize="14sp"
+            android:fontFamily="@font/be_vietnam_medium"
+            android:inputType="number"
+            android:hint="Add Phone Number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#9AFFFFFF"
+
+            android:drawableStart="@drawable/outline_black_circle_24"
+            android:drawablePadding="10sp"
+            android:textSize="14sp"
+            android:fontFamily="@font/be_vietnam_medium"
+            android:inputType="textEmailAddress"
+            android:hint="Add Email"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/birthdayEditText"
+            android:layout_width="match_parent"
+
+            android:drawableStart="@drawable/outline_black_circle_24"
+            android:drawablePadding="10sp"
+            android:layout_height="wrap_content"
+            android:background="#9AFFFFFF"
+            android:textSize="14sp"
+            android:fontFamily="@font/be_vietnam_medium"
+            android:inputType="date"
+            android:hint="Add Birthday"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/notesEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#9AFFFFFF"
+            android:textSize="14sp"
+            android:fontFamily="@font/be_vietnam_medium"
+            android:inputType="text"
+            android:hint="Notes"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+</LinearLayout>

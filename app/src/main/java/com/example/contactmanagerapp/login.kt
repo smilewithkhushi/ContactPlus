@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuthInvalidUserException
 class login : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         lateinit var firebaseAuth: FirebaseAuth
         lateinit var inputEmail : EditText
         lateinit var inputPass : EditText
@@ -25,12 +26,6 @@ class login : AppCompatActivity() {
         inputPass = findViewById(R.id.loginPassword)
         val loginBtn = findViewById<Button>(R.id.loginButton)
         val signupBtn = findViewById<Button>(R.id.signUpButton)
-
-        val email = inputEmail.text.toString()
-        val password = inputPass.text.toString()
-
-        val mailText = inputEmail?.text
-        val pwdText = inputPass?.text
 
         //show password button
         val checkBoxShowPassword = findViewById<CheckBox>(R.id.checkBox)
@@ -51,9 +46,12 @@ class login : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         loginBtn.setOnClickListener {
-            if (mailText.isNullOrBlank()) {
+            val email = inputEmail.text.toString()
+            val password = inputPass.text.toString()
+
+            if (email.isEmpty()) {
             Toast.makeText(this, "Please enter email", Toast.LENGTH_SHORT).show()
-        }else if (pwdText.isNullOrBlank()) {
+        }else if (password.isEmpty()) {
             Toast.makeText(this, "Please enter password", Toast.LENGTH_SHORT).show()
         }
             else {

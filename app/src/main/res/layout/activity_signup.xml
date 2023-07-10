@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:viewBindingIgnore="true"
-    android:background="@drawable/modernblue2"
+    android:background="@drawable/modernbluesmall2"
     tools:context=".signup">
 
 
@@ -15,19 +15,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="130dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/aleo_bold"
         android:shadowColor="#606060"
         android:text="Please sign up to create an account"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
         tools:viewBindingIgnore="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -35,7 +35,8 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:drawableLeft="@drawable/baseline_person_24"
+            android:drawableStart="@drawable/baseline_person_24"
+            android:drawablePadding="10sp"
             android:fontFamily="@font/be_vietnam_medium"
             android:hint="Name"
             android:inputType="text"
@@ -45,12 +46,30 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:viewBindingIgnore="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signupID"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="10sp"
+            android:drawableStart="@drawable/baseline_credit_card_24"
+            android:fontFamily="@font/be_vietnam_medium"
+            android:hint="Unique Username"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
         tools:viewBindingIgnore="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -58,7 +77,8 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:drawableLeft="@drawable/baseline_email_24"
+            android:drawablePadding="10sp"
+            android:drawableStart="@drawable/baseline_email_24"
             android:fontFamily="@font/be_vietnam_medium"
             android:hint="Email"
             android:inputType="textEmailAddress"
@@ -72,7 +92,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="1dp"
-        android:layout_margin="5dp"
         tools:layout_editor_absoluteY="362dp">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -80,7 +99,8 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:drawableLeft="@drawable/baseline_lock_24"
+            android:drawablePadding="10sp"
+            android:drawableStart="@drawable/baseline_lock_24"
             android:fontFamily="@font/be_vietnam_medium"
             android:hint="Password"
             android:inputType="textPassword"
@@ -93,8 +113,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Show Password"
-        android:layout_gravity="center"
-        android:layout_marginTop="2dp" />
+        android:textSize="12dp"
+        android:fontFamily="@font/be_vietnam_medium"
+        android:layout_gravity="center"/>
 
     <Button
         android:id="@+id/signUpButton"
@@ -108,7 +129,7 @@
         android:layout_gravity="center"
         android:layout_margin="5dp"
         android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:textSize="15sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -116,7 +137,7 @@
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:padding="10dp">
 
         <TextView

@@ -15,6 +15,7 @@ class signup : AppCompatActivity() {
     private lateinit var nameEditText: TextInputEditText
     private lateinit var emailEditText: TextInputEditText
     private lateinit var passwordEditText: TextInputEditText
+    private lateinit var uniqueIdExitText: TextInputEditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +24,7 @@ class signup : AppCompatActivity() {
         nameEditText = findViewById(R.id.signupName)
         emailEditText = findViewById(R.id.signupEmail)
         passwordEditText = findViewById(R.id.signupPassword)
+        uniqueIdExitText = findViewById(R.id.signupID)
 
         val firebaseAuth = FirebaseAuth.getInstance()
         val signUpButton = findViewById<Button>(R.id.signUpButton)
@@ -32,7 +34,12 @@ class signup : AppCompatActivity() {
         signUpButton.setOnClickListener {
             val name = nameEditText.text.toString()
             val email = emailEditText.text.toString()
+            val username = uniqueIdExitText.text.toString()
             val password = passwordEditText.text.toString()
+
+            if (password.length<6){
+                Toast.makeText(this, "The password should be 6 characters long", Toast.LENGTH_SHORT).show()
+            }
 
             firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
@@ -43,17 +50,21 @@ class signup : AppCompatActivity() {
                         // Store the user data in the realtime database
                         val database = FirebaseDatabase.getInstance()
                         val dbRef= database.reference.child("users")
-                        val data = User(name, email)
 
-                        val userID=dbRef.push().key
 
-                        val userRef = dbRef.child(userID!!)
+                        val userId = firebaseAuth.currentUser?.uid ?: ""
+
+                        val data = User(username, name, email, 0)
+
+                        //val userID=dbRef.push().key
+
+                        val userRef = dbRef.child(userId)
                         userRef.setValue(data)
 
                         Toast.makeText(this, "Sign up successful", Toast.LENGTH_SHORT).show()
                     } else {
                         // Sign up failed
-                        Toast.makeText(this, "Sign up failed", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Sign up failed.", Toast.LENGTH_SHORT).show()
                     }
                 }
         }
@@ -81,6 +92,6 @@ class signup : AppCompatActivity() {
     }
 
     // Define a data class to represent your data structure
-    data class User(val name: String, val mail: String)
+    data class User(val userID: String, val name: String, val mail: String, val totalContacts : Int)
 
 }
