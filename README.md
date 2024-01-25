@@ -128,7 +128,7 @@ git push origin my-feature-branch
 
 #### Make a Pull Request
 
-Go to https://github.com/yournamehere/Muskan--The-joy-of-giving-by-nature and select your feature branch. Click the 'Pull Request' button and fill out the form. Pull requests are usually reviewed within a few days.
+Go to https://github.com/yournamehere/ContactPlus and select your feature branch. Click the 'Pull Request' button and fill out the form. Pull requests are usually reviewed within a few days.
 
 If code review requests changes (and it usually will) just `git push` the changes to your repository on the same branch, and the pull request will be automatically updated.
 
